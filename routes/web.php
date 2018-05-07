@@ -13,6 +13,6 @@
 
 //Route::get('/', function () {
 //    return view('welcome');
-//    App\Http\Controllers\Index;
+//    App\Http\Controllers\Index123;
     Route::get('/sort', '\App\Http\Controllers\Index\IndexController@index');
 //});
