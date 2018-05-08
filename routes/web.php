@@ -14,6 +14,6 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //    App\Http\Controllers\Index123;
-    		echo 123;exit;
+    		exit;
 	Route::get('/sort', '\App\Http\Controllers\Index\IndexController@index');
 //});
