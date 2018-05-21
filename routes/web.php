@@ -13,7 +13,7 @@
 
 //Route::get('/', function () {
 //    return view('welcome');
-//    App\Http\Controllers\Index123;
-    		exit;
+//    App\Http\Controllers\Index123456;
+    	
 	Route::get('/sort', '\App\Http\Controllers\Index\IndexController@index');
 //});

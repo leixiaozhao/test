@@ -4,14 +4,24 @@ namespace App\Http\Controllers\Index;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\DB;
 use QL\QueryList;
 class IndexController extends Controller
 {
     public function index(){
+//$input = Input::all();
+//print_r($input);exit;
+//	$name =	$_GET['name'];
+//	$aa = $_GET['aa'];
+//	echo $aa.$name;exit;
+$results = DB::table('zl_admin')->paginate(15);
+print_r($results);exit;
+//echo 123;exit;
         //采集某页面所有的图片
-        $data = QueryList::get('http://cms.querylist.cc/bizhi/453.html')->find('img')->attrs('src');
+      //  $data = QueryList::get('http://cms.querylist.cc/bizhi/453.html')->find('img')->attrs('src');
 //打印结果
-        print_r($data->all());
+       // print_r($data->all());
 
 //采集某页面所有的超链接和超链接文本内容
 //可以先手动获取要采集的页面源码
